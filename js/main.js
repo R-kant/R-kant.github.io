@@ -1,18 +1,51 @@
  $(document).ready(function () {
+    user={
+        name:$('#name'),
+        email:$('#email'),
+        phone:$('#phone'),
+        message:$('#message')
+    }
+    function clear(){
+        for(var key in user){
+            user[key].val("");
+        }
 
- 	$('.button-collapse').sideNav({
- 		closeOnClick:true
- 	});
-	$('.slider').slider({
-	indicators:false,
-	transition:500,
-	interval:6000,
-	height:"100vh"
+    }
+    $('#submitBtn').on('click',function(e){
+
+        $.ajax({
+            type: 'POST',
+            url : 'https://creepy-platypus.dev.with-datafire.io/contact',
+            data:{
+                name:user.name.val(),
+                phone:user.phone.val(),
+                message: user.message.val(),
+                emailAddress: user.email.val()
+            },
+            success: function(data){
+                console.log(data)
+                clear();
+
+            },
+
+            error: function(data){
+                console.log(data)
+                clear();
+            }
+        })
+    })
+    $('.button-collapse').sideNav({
+        closeOnClick:true
+    });
+    $('.slider').slider({
+    indicators:false,
+    transition:500,
+    interval:6000,
+    height:"100vh"
     });
     
-	$('.modal').modal();
-//init carousel
-//$('.carousel-slider').carousel({fullWidth:true});
+    $('.modal').modal();
+
 $('.scrollspy').scrollSpy();
  var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -32,7 +65,7 @@ var chart = new Chart(ctx, {
 
     // Configuration options go here
     options: {
-    	  scales: {
+          scales: {
         xAxes: [{
             barPercentage: 0.4
         }],

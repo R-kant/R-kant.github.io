@@ -359,7 +359,7 @@
                   <h4>Have an Idea!</h4>
                   <h5>Fill out this form and I'll get back to you</h5>
                   <div class="input-field">
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="name" required>
                     <label for="name">
                       <i class="material-icons left white-text">person</i>Name</label>
                    
@@ -367,23 +367,23 @@
 
                   <div class="input-field">
 
-                     <input type="text" id="phone" required>
+                     <input type="text" id="phone" name="phone" required>
                     <label for="phone">
                       <i class="material-icons left white-text">phone</i>Phone</label>
                   </div>
 
                   <div class="input-field">
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="emailAddress" required>
                     <label for="email">
                       <i class="material-icons left white-text">email</i>Email</label> 
                   </div>
 
                   <div class="input-field">
-                    <textarea class="materialize-textarea" required id="message"></textarea>
+                    <textarea class="materialize-textarea" required name="message" id="message"></textarea>
                     <label for="message">
                       <i class="material-icons left white-text">message</i>Message</label>
                   </div>
-                    <a href="#modal2" class="btn purple lighten-2 modal-trigger">
+                    <a href="#modal2" class="btn purple lighten-2 modal-trigger" id="submitBtn">
                       <i class="material-icons left">send</i>
                       Submit
                     </a>
