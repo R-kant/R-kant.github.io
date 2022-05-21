@@ -57,16 +57,16 @@
 .link{
   text-decoration: none;
   color:white;
-  background:black;
+  background:rgb(20, 20,20);
   padding:8px 25px;
   border-radius: 20px;
-  box-shadow: 3px 3px 5px 0 rgb(0,0,0,0.9),
-              -3px -3px 5px 0  rgb(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 5px 0 rgb(10,10,10,0.9),
+              -2px -1px 5px 0  rgb(255, 255, 255, 0.1);
 }
 
 .link:active{
-  box-shadow: inset 10px 10px 5px 0 rgb(0,0,0,0.9),
-              inset -10px -10px 5px 0  rgb(255, 255, 255, 0.1);
+  box-shadow: inset 5px 5px 5px 0 rgb(10,10,10,0.9),
+              inset -4px -2px 5px 0  rgb(255, 255, 255, 0.1);
 }
 
 
