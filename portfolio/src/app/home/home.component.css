@@ -1,0 +1,103 @@
+
+#home{
+  background:url("../../assets/landing.jpg") no-repeat;
+  background-size: cover;
+
+  height:100vh;
+  width:100%;
+  position:relative;
+}
+
+.overlay{
+  background:rgb(0,0,0, 0.8);
+  width:100%;
+  position: absolute;
+  z-index: 100;
+  height: 100vh;
+}
+
+.text-overlay{
+  position: absolute;
+  z-index: 101;
+  color:white;
+  top:30%;
+  padding-left: 5%;
+}
+.brand{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10%;
+}
+
+.description{
+  font-size: 1.5rem;
+  width: 40%;
+}
+.designation{
+  font-weight: 500;
+  margin-bottom: 10%;
+  display: block;
+}
+.neo-nav{
+  position: absolute;
+  width: 100%;
+  padding: 5% 10%;
+  z-index: 102;
+  display: flex;
+  justify-content: right;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  width:50%;
+}
+.nav-links{
+  list-style-type: none;
+}
+.link{
+  text-decoration: none;
+  color:white;
+  background:black;
+  padding:8px 25px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px 0 rgb(0,0,0,0.9),
+              -3px -3px 5px 0  rgb(255, 255, 255, 0.1);
+}
+
+.link:active{
+  box-shadow: inset 10px 10px 5px 0 rgb(0,0,0,0.9),
+              inset -10px -10px 5px 0  rgb(255, 255, 255, 0.1);
+}
+
+
+@media (max-width:320px), (max-width:481px){
+  .brand{
+
+    font-size: 1.5rem;
+  }
+  .text-overlay{
+    top:20%;
+  }
+  .description{
+    width:100%;
+    font-size: 1rem;
+  }
+  .neo-nav{
+    flex-direction: column;
+    background-color: black;
+
+  }
+  .nav{
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .nav-links{
+    margin-bottom: 30px;
+
+  }
+  .link{
+    box-shadow: 3px 3px 5px 0 rgb(255, 255, 255, 0.1),
+    -3px -3px 5px 0  rgb(255, 255, 255, 0.1);
+  }
+}
